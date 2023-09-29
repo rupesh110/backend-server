@@ -1,9 +1,14 @@
 import express from "express";
 import axios from "axios";
 import dotenv from "dotenv";
+import cors from "cors";
+
+
+
 
 const app = express();
 const PORT = 4000;
+app.use(cors());
 dotenv.config();
 
 const getQuotes = (req, res) => {
