@@ -11,10 +11,11 @@ const PORT = 4000;
 app.use(cors());
 dotenv.config();
 
+console.log(process.env['X-RapidAPI-KEY']);
 const getQuotes = (req, res) => {
     axios.get("https://quotes15.p.rapidapi.com/quotes/random/", {
         headers: {
-            'X-RapidAPI-Key': 'b55dd737e7mshec2849083906f9ap1b4889jsn273c8cc160f6',
+            'X-RapidAPI-Key': process.env['X-RapidAPI-KEY'],
             'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
           }
     })
