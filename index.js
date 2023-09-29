@@ -14,9 +14,9 @@ dotenv.config();
 const getQuotes = (req, res) => {
     axios.get("https://quotes15.p.rapidapi.com/quotes/random/", {
         headers: {
-            'X-RapidAPI-Host': process.env["X-RapidAPI-Host"],
-            'X-RapidAPI-Key': process.env["X-RapidAPI-Key"]
-        }
+            'X-RapidAPI-Key': 'b55dd737e7mshec2849083906f9ap1b4889jsn273c8cc160f6',
+            'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
+          }
     })
     .then(response => {
         const filteredResponse = {
